@@ -1,0 +1,53 @@
+
+
+\begin{frame}
+    \frametitle{条件极值 例题}
+	例\ 课本P257 1.5\\
+	$f=xyz,x^2+y^2+z^2=1,x+y+z=0$\\
+	对应的拉格朗日函数为$L(x,y,z,u,v)=xyz+u(x^2+y^2+z^2-1)+v(x+y+z)$\\
+	令其关于各原变量的一阶偏导等于0\\
+	$\frac{\partial L}{\partial x}=yz+2ux+v=0$\\
+	$\frac{\partial L}{\partial y}=xz+2uy+v=0$\\
+	$\frac{\partial L}{\partial z}=xy+2uz+v=0$\\
+	观察形式，对三个式子分别乘其自变量得到\\
+	$xyz+2ux^2+vx=0$\\
+	$xyz+2uy^2+vy=0$\\
+	$xyz+2uz^2+vz=0$\\
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{条件极值 例题}
+	再三个式子相加\\
+	得到$3xyz+2u(x^2+y^2+z^2)+v(x+y+z)=0$\\
+	其中$x^2+y^2+z^2=1,x+y+z=0$\\
+	所以$3xyz+2u=0$,即$u=-\frac{3}{2}xyz$\\
+	代入第一个式子消$u$得到$v=-yz-3x^2yz$\\
+	同理$v=-xz-3xy^2z,v=-xy-3xyz^2$\\
+	所以$x+3xy^2=y+3x^2y$\\
+	即$(1+3xy)(y-x)=0$\\
+	同样地有$(1+3xz)(z-x)=0$,$(1+3yz)(y-z)=0$\\
+	分析一下这个方程组和约束条件$x^2+y^2+z^2=1,x+y+z=0$\\
+	有$(\frac{\sqrt{6}}{6},\frac{\sqrt{6}}{6},-\frac{\sqrt{6}}{3})$对于三个自变量的组合即为极值点\\
+	对应地极值为$-\frac{\sqrt{6}}{18}$\\
+	
+\end{frame}
+
+\begin{frame}
+	正常来说，在大二下，计科会有一门《最优化理论》的课程，到时优化的变量空间和函数的写法可就不是现在的标量写法了。\\
+	例如\\
+	$\min_x f(x),x\in R^n$\\
+	$s.t. g_i(x)\leq0,i=1,2,\dots,m$\\
+	$\quad h_j(x)=0,j=1,2,\dots,k$\\
+	对应地会有拉格朗日函数$L(x,\lambda,v)=f(x)+\sum_{i=1}^{m}\lambda_ig_i(x)+\sum_{j=1}^{k}v_jh_j(x)$\\
+	其目标函数$f(x)$一般会有凸函数的性质\\
+	通过求解KKT方程得到极值点或鞍点:\\
+	$\nabla_x L(x,\lambda, v)=\vec 0$\\
+	$\lambda_ig_i(x)=0,g_i(x)\leq0,i=1,2,\dots,m$\\
+	$v_jh_j(x)=0,h_j(x)=0,j=1,2,\dots,k$\\
+	$\lambda_i\geq0$\\
+	结合约束限制条件和二阶充分条件(具体就不展开了)即可判断是否为局部极值点。这便是高维最优化问题的一种解法。
+	
+\end{frame}
+
