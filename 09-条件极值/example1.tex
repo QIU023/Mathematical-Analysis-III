@@ -1,0 +1,38 @@
+\begin{frame}
+    \frametitle{条件极值 例题}
+    例\ 课本P257 1.3
+    \begin{displaymath}
+        f = x - 2y + 2z
+    \end{displaymath}
+    
+    约束条件为
+    \begin{displaymath}
+        x^2 + y^2 + z^2 = 1
+    \end{displaymath}
+
+    由上，作拉格朗日函数
+    \begin{displaymath}
+        L(x, y, z) = x - 2y + 2z + \lambda (x^2 + y^2 + z^2 - 1)
+    \end{displaymath}
+
+\end{frame}
+\begin{frame}
+    令
+    \begin{displaymath}
+        \begin{split}
+            &L_x = 1 + 2\lambda x = 0\\
+            &L_y = -2 + 2\lambda y = 0\\
+            &L_z = 2 + 2\lambda z = 0\\
+            &x^2 + y^2 + z^2 - 1 = 0\\
+        \end{split}
+    \end{displaymath}
+
+    解得：
+    \begin{displaymath}
+        \begin{split}
+            &x = -\frac{1}{3} \\
+            &y = \frac{2}{3} \\
+            &z = -\frac{2}{3}
+        \end{split}
+    \end{displaymath}
+\end{frame}
